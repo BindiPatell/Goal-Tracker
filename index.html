@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>My 2024 Goals</title>
+  <link rel="stylesheet" href="main.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Sortable/1.14.0/Sortable.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script> 
+</head>
+
+<body>
+
+    <div id="particles-js"></div>
+
+  <header>
+    <h1>My 2024 Goals</h1>
+
+    <form id="new-goal-form">
+      <label for="new-goal-input">New Goal:</label>
+      <input type="text" id="new-goal-input" placeholder="What is your goal?">
+      <label for="due-date-input">Due Date:</label>
+      <input type="date" id="due-date-input">
+      
+      <input type="submit" id="new-goal-submit" value="Add Goal"> 
+    </form>     
+  </header>
+
+  <main>
+    <section class="goal-list">
+      <h2>Goals</h2>
+      <div id="goals"></div>
+    </section>
+  </main>
+
+  <!-- Script for delete confirmation -->
+  <script>
+    const confirmDelete = () => {
+      return confirm('Are you sure you want to delete this goal?');
+    };
+  </script>
+
+<script>
+    
+    particlesJS('particles-js',
+
+  {
+    "particles": {
+  "number": {
+    "value": 150 
+  },
+  "shape": {
+    "type": "star",
+    "stroke": {
+      "width": 0
+    }
+  },
+  "size": {
+    "value": 15,
+    "random": true
+  } 
+}
+  }
+
+);
+
+  </script>
+
+  <script src="main.js"></script>
+</body>
+
+</html>
